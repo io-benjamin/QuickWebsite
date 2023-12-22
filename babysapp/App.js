@@ -1,5 +1,5 @@
-import React, { useRef, useEffect } from 'react';
-import { View, FlatList, Image, Text, StyleSheet, TouchableOpacity, Animated, Easing } from 'react-native';
+import React from 'react';
+import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
 
 
 
@@ -19,65 +19,27 @@ const MultipleMediaComponent = () => {
     require('./assets/photos/image11.jpg'),
   ];
 
-  // Function to play audio
-  const playAudio = async () => {
-    // Your audio playback code goes here
-  };
-
-  const scrollX = useRef(new Animated.Value(0)).current;
-  const flatListRef = useRef(null);
-
-  useEffect(() => {
-    const scroll = () => {
-      scrollX.setValue(0);
-      Animated.timing(scrollX, {
-        toValue: 1,
-        duration: 20000, // Adjust duration for slow scrolling
-        useNativeDriver: true,
-      }).start(() => {
-        scroll();
-      });
-    };
-    scroll();
-  }, []);
-
-  const translateX = scrollX.interpolate({
-    inputRange: [0, 1],
-    outputRange: [0, -2000], // Adjust value to cover the width of 4 images
-  });
-
-  const renderItem = ({ item }) => (
-    <Image
-      source={item}
-      style={styles.image}
-      resizeMode="cover"
-    />
-  );
-
   return (
     <View style={styles.container}>
       <Image source={require('./assets/garland.png')} style={styles.garlandImage} />
-      <Text style={styles.heading}>Merry Christmas Baby</Text>
-      <Animated.FlatList
-        ref={flatListRef}
-        data={imageSources}
-        renderItem={renderItem}
-        keyExtractor={(item, index) => index.toString()}
+      <Text style={styles.heading}>Merry Christmas Kimmy❤️</Text>
+    <View style={styles.imageContainer}>
+      <ScrollView
         horizontal
-        pagingEnabled
         showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{ paddingHorizontal: 10 }}
-        style={{ transform: [{ translateX }] }}
-        onScroll={() => {
-          scrollX.setValue(0);
-        }}
-      />
-      <Text style={styles.text}>
-        This is an example text related to the images and audio.
-      </Text>
-      <TouchableOpacity style={styles.button} onPress={playAudio}>
-        <Text style={styles.buttonText}>Play Audio</Text>
-      </TouchableOpacity>
+        contentContainerStyle={styles.imagesContent}
+      >
+        {imageSources.map((image, index) => (
+          <TouchableOpacity key={index.toString()} onPress={imageSources}>
+            <Image
+              source={image}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          </TouchableOpacity>
+        ))}
+      </ScrollView>
+    </View>
     </View>
   );
 };
@@ -93,7 +55,7 @@ const styles = StyleSheet.create({
   heading: {
     fontSize: 32,
     fontWeight: 'bold',
-    marginTop: 40,
+    marginTop: -350,
     marginBottom: 20,
     textAlign: 'center',
     fontFamily: 'cursive',
@@ -115,9 +77,6 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.5, // Shadow opacity
     shadowRadius: 4, // Shadow blur radius
     elevation: 8, // For Android shadow
-  },
-  imageContainer: {
-    alignItems: 'center',
   },
   image: {
     width: 250,
@@ -142,12 +101,14 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   imageContainer: {
-    alignItems: 'center',
+    alignItems: 'align-start',
+    overflowX: 'scroll', // Enable horizontal scrolling
+    width: '100%', // Ensure the container takes the full width
   },
   image: {
     width: 250,
     height: 250,
-    margin: 10,
+    marginHorizontal: 5,
     borderRadius: 10,
   },
 });
