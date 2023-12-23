@@ -64,7 +64,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#E3E8E3',
+    backgroundColor: '#ADD8E6',
     position: 'relative', // To make absolute positioning work within this container
   },
   heading: {
