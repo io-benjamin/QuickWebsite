@@ -1,10 +1,8 @@
-import React from 'react';
-import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView } from 'react-native';
-
-
+import React, { useEffect, useState } from 'react';
+import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView, Animated, Dimensions } from 'react-native';
+import Snow from 'react-native-snow'
 
 const MultipleMediaComponent = () => {
-  // Define an array of image sources
   const imageSources = [
     require('./assets/photos/image1.jpg'), // Replace with your image URIs
     require('./assets/photos/image2.jpg'),
@@ -21,25 +19,41 @@ const MultipleMediaComponent = () => {
 
   return (
     <View style={styles.container}>
+
+      {/* Main container */}
       <Image source={require('./assets/garland.png')} style={styles.garlandImage} />
       <Text style={styles.heading}>Merry Christmas Kimmy❤️</Text>
-    <View style={styles.imageContainer}>
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.imagesContent}
-      >
+
+      {/* Snowfall container */}
+      <View style={styles.snowContainer}>
+        <Snow fullScreen={false} snowflakesCount={10000} fallSpeed="fast" />
+      </View>
+
+      {/* Images */}
+      <View style={styles.imageContainer}>
         {imageSources.map((image, index) => (
-          <TouchableOpacity key={index.toString()} onPress={imageSources}>
-            <Image
-              source={image}
-              style={styles.image}
-              resizeMode="cover"
-            />
-          </TouchableOpacity>
+          <Image
+            key={index.toString()}
+            source={image}
+            style={styles.image}
+            resizeMode="cover"
+          />
         ))}
-      </ScrollView>
-    </View>
+      </View>
+
+      {/* Text container */}
+      <View style={styles.textContainer}>
+        <Text>
+          Well, Hi baby. I see you found your present. I hope you enjoy this as much as I've enjoyed working on it. I've had all sorts of ideas for this project but didn't know what route to take.
+        </Text>
+      </View>
+
+      <View style={styles.textContainer2}>
+        <Text>
+          Hi again, 
+        </Text>
+      </View>
+
     </View>
   );
 };
@@ -50,7 +64,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 20,
-    backgroundColor: '#E3E8E3'
+    backgroundColor: '#E3E8E3',
+    position: 'relative', // To make absolute positioning work within this container
   },
   heading: {
     fontSize: 32,
@@ -60,8 +75,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontFamily: 'cursive',
     color: '#333',
-    position: 'relative',
-    zIndex: 1, // Ensure the text is above other elements
   },
   garlandImage: {
     width: 300,
@@ -72,44 +85,60 @@ const styles = StyleSheet.create({
     left: '50%',
     marginLeft: -150,
     zIndex: 1,
-    shadowColor: '#000', // Shadow color
-    shadowOffset: { width: 0, height: 4 }, // Shadow offset
-    shadowOpacity: 0.5, // Shadow opacity
-    shadowRadius: 4, // Shadow blur radius
-    elevation: 8, // For Android shadow
-  },
-  image: {
-    width: 250,
-    height: 250,
-    margin: 10,
-    borderRadius: 10,
-  },
-  text: {
-    fontSize: 16,
-    marginTop: 20,
-    textAlign: 'center',
-  },
-  button: {
-    marginTop: 20,
-    padding: 10,
-    backgroundColor: '#3498db',
-    borderRadius: 5,
-  },
-  buttonText: {
-    color: 'white',
-    fontSize: 16,
-    textAlign: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.5,
+    shadowRadius: 4,
+    elevation: 8,
   },
   imageContainer: {
+    flexDirection: 'row',
     alignItems: 'align-start',
-    overflowX: 'scroll', // Enable horizontal scrolling
-    width: '100%', // Ensure the container takes the full width
+    overflow: 'scroll',
+    width: '100%',
   },
   image: {
     width: 250,
     height: 250,
     marginHorizontal: 5,
     borderRadius: 10,
+  },
+  textContainer: {
+    position: 'absolute',
+    bottom: 200,
+    left: 20,
+    right: 20,
+    padding: 10,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  textContainer2: {
+    position: 'absolute',
+    bottom: 60,
+    left: 20,
+    right: 20,
+    padding: 10,
+    backgroundColor: 'white',
+    borderRadius: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3,
+    shadowRadius: 2,
+    elevation: 2,
+  },
+  snowContainer: {
+    position: 'fixed',
+    top: 50,
+    left: 100,
+    right: 100,
+    bottom: 0,
+    width: '100%', // Adjust the width and height as needed
+    height: '100%',
   },
 });
 
