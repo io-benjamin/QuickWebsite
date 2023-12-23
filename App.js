@@ -26,7 +26,7 @@ const MultipleMediaComponent = () => {
 
       {/* Snowfall container */}
       <View style={styles.snowContainer}>
-        <Snow fullScreen={false} snowflakesCount={10000} fallSpeed="fast" />
+        <Snow fullScreen={false} snowflakesCount={1000} fallSpeed="fast" />
       </View>
 
       {/* Images */}
