@@ -4,7 +4,7 @@ import Snow from 'react-native-snow'
 
 const MultipleMediaComponent = () => {
   const imageSources = [
-    require('./assets/photos/image1.jpg'), // Replace with your image URIs
+    require('./assets/photos/image1.jpg'), 
     require('./assets/photos/image2.jpg'),
     require('./assets/photos/image3.jpg'),
     require('./assets/photos/image4.jpg'),
@@ -26,7 +26,7 @@ const MultipleMediaComponent = () => {
 
       {/* Snowfall container */}
       <View style={styles.snowContainer}>
-        <Snow fullScreen={false} snowflakesCount={1000} fallSpeed="fast" />
+        <Snow fullScreen={false} snowflakesCount={10000} fallSpeed="fast" />
       </View>
 
       {/* Images */}
