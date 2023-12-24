@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.js": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/js/main.3bb966be.js",
+    "static/js/60.5467efa8.js": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/js/60.5467efa8.js",
+    "static/media/image8.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image8.01899dfa48f6ba77d5e5.jpg",
+    "static/media/image5.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image5.d75b4b65d0a42389ec27.jpg",
+    "static/media/image3.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image3.af3ff68410cc36797394.jpg",
+    "static/media/image4.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image4.eb6128c3daa6a11e52b4.jpg",
+    "static/media/image11.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image11.b12d1f2dfa42eba3dc74.jpg",
+    "static/media/image10.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image10.ea39f0e5610eddba0503.jpg",
+    "static/media/image9.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image9.9ce738fef8857b988dd5.jpg",
+    "static/media/image6.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image6.347654f889d48ed7cda8.jpg",
+    "static/media/image2.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image2.3f24b5364e73ccc18a11.jpg",
+    "static/media/image1.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image1.ccd5a1cac0b8bfce386c.jpg",
+    "static/media/image7.jpg": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/image7.9e9eea95cce872c32084.jpg",
+    "static/media/garland.png": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/media/garland.aad7e671361053867249.png",
+    "favicon.ico": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/favicon.ico",
+    "index.html": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/index.html",
+    "favicon-32.png": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/favicon-32.png",
+    "favicon-16.png": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/favicon-16.png",
+    "serve.json": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/serve.json",
+    "manifest.json": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/manifest.json",
+    "main.3bb966be.js.map": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/js/main.3bb966be.js.map",
+    "60.5467efa8.js.map": "/io-benjamin/https-io-benjamin.github.io-QuickWebsite-/static/js/60.5467efa8.js.map"
+  },
+  "entrypoints": [
+    "static/js/60.5467efa8.js",
+    "static/js/main.3bb966be.js"
+  ]
+}
