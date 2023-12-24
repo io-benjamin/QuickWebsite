@@ -1,4 +1,4 @@
-{{
+{
   "homepage": "https://io-benjamin.github.io/merry-christmas/",
   "name": "hi-baby",
   "version": "0.1.0",
@@ -47,4 +47,4 @@
   "devDependencies": {
     "gh-pages": "^6.1.1"
   }
-}}
+}
