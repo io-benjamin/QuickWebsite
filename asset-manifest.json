@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/merry-xmas/static/js/main.046bdd72.js",
+    "main.js": "/merry-xmas/static/js/main.36a00d9c.js",
     "static/js/653.a773e5b8.js": "/merry-xmas/static/js/653.a773e5b8.js",
     "static/media/image8.jpg": "/merry-xmas/static/media/image8.01899dfa48f6ba77d5e5.jpg",
     "static/media/image5.jpg": "/merry-xmas/static/media/image5.d75b4b65d0a42389ec27.jpg",
@@ -20,11 +20,11 @@
     "favicon-16.png": "/merry-xmas/favicon-16.png",
     "serve.json": "/merry-xmas/serve.json",
     "manifest.json": "/merry-xmas/manifest.json",
-    "main.046bdd72.js.map": "/merry-xmas/static/js/main.046bdd72.js.map",
+    "main.36a00d9c.js.map": "/merry-xmas/static/js/main.36a00d9c.js.map",
     "653.a773e5b8.js.map": "/merry-xmas/static/js/653.a773e5b8.js.map"
   },
   "entrypoints": [
     "static/js/653.a773e5b8.js",
-    "static/js/main.046bdd72.js"
+    "static/js/main.36a00d9c.js"
   ]
 }
