@@ -1,60 +1,64 @@
-import React, { useEffect, useState } from 'react';
-import { View, Image, Text, StyleSheet, TouchableOpacity, ScrollView, Animated, Dimensions } from 'react-native';
-import Snow from 'react-native-snow'
+import React from 'react';
+import { View, Image, Text, StyleSheet, ScrollView } from 'react-native';
+import ConfettiCannon from 'react-native-confetti-cannon';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const MultipleMediaComponent = () => {
   const imageSources = [
-    require('./assets/photos/image1.jpg'), 
-    require('./assets/photos/image2.jpg'),
-    require('./assets/photos/image3.jpg'),
-    require('./assets/photos/image4.jpg'),
-    require('./assets/photos/image5.jpg'),
-    require('./assets/photos/image6.jpg'),
-    require('./assets/photos/image7.jpg'),
-    require('./assets/photos/image8.jpg'),
-    require('./assets/photos/image9.jpg'),
-    require('./assets/photos/image10.jpg'),
-    require('./assets/photos/image11.jpg'),
+    require('./assets/birthday-photos/image1.jpg'), 
+    require('./assets/birthday-photos/image2.jpg'),
+    require('./assets/birthday-photos/image3.jpg'),
+    require('./assets/birthday-photos/image4.jpg'),
+    require('./assets/birthday-photos/image5.jpg'),
+    require('./assets/birthday-photos/image6.jpg'),
+    require('./assets/birthday-photos/image7.jpg'),
+    require('./assets/birthday-photos/image8.jpg'),
   ];
 
   return (
-    <View style={styles.container}>
-
+    <LinearGradient
+      colors={['#B46FA4', '#93ECD8']}
+      start={{ x: 0, y: 0 }}
+      end={{ x: 1, y: 1 }}
+      style={styles.container}
+    >
       {/* Main container */}
-      <Image source={require('./assets/garland.png')} style={styles.garlandImage} />
-      <Text style={styles.heading}>Merry Christmas Kimmy❤️</Text>
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
+        <Image source={require('./assets/birthday.png')} style={styles.garlandImage} />
+        <Text style={styles.heading}>Happy Birthday Kimmy❤️</Text>
 
-      {/* Snowfall container */}
-      <View style={styles.snowContainer}>
-        <Snow fullScreen={true} snowflakesCount={10000} fallSpeed="fast" />
-      </View>
+        {/* Confetti */}
+        <View style={styles.confettiContainer}>
+          <ConfettiCannon count={200} origin={{ x: -10, y: 0 }} explosionSpeed={300} fadeOut />
+        </View>
 
-      {/* Images */}
-      <View style={styles.imageContainer}>
-        {imageSources.map((image, index) => (
-          <Image
-            key={index.toString()}
-            source={image}
-            style={styles.image}
-            resizeMode="cover"
-          />
-        ))}
-      </View>
+        {/* Images */}
+        <View style={styles.imageContainer}>
+          {imageSources.map((image, index) => (
+            <Image
+              key={index.toString()}
+              source={image}
+              style={styles.image}
+              resizeMode="cover"
+            />
+          ))}
+        </View>
 
-      {/* Text container */}
-      <View style={styles.textContainer}>
-        <Text>
-          Well, Hi baby. I see you found your present. I hope you enjoy this as much as I've enjoyed working on it. I've had all sorts of ideas for this project but didn't know what route to take.
-        </Text>
-      </View>
+        {/* Text containers */}
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>
+            Well, hello baby❤️. Another blessed year has passed and I'm so grateful to have you in my life and celebrate this special day with you. You are a blessing that God has blessed me with and I won't ever take that for granted. I have prepared a day for us and your friends in Washington DC, I know there are some places you have wanted to visit and I have made sure we will visit them. 
+            I apologize for the suspense but I wanted this day to be a surprise for you. I am so proud of you and your accomplishments, although you say you have done nothing compared to me, you don't fail to amaze me every day. I know there is nothing stopping you from accomplishing your dreams and goals. Que Dios te siga bendiciendo y tus metas se acomplejan. I hope you enjoy this day and all that we do, I love you Kimmy❤️
+          </Text>
+        </View>
 
-      <View style={styles.textContainer2}>
-        <Text>
-          Hi again, 
-        </Text>
-      </View>
-
-    </View>
+        <View style={styles.textContainer}>
+          <Text style={styles.text}>
+            ps just wait till your graduation hehe❤️
+          </Text>
+        </View>
+      </ScrollView>
+    </LinearGradient>
   );
 };
 
@@ -63,82 +67,58 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    padding: 20,
-    backgroundColor: '#ADD8E6',
-    position: 'relative', // To make absolute positioning work within this container
+    paddingTop: 20,
+    paddingBottom: 20,
+  },
+  scrollContainer: {
+    flexGrow: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   heading: {
-    fontSize: 32,
+    fontSize: 28,
     fontWeight: 'bold',
-    marginTop: -350,
+    marginTop: 20,
     marginBottom: 20,
-    textAlign: 'center',
     fontFamily: 'cursive',
     color: '#333',
   },
   garlandImage: {
     width: 300,
-    height: 50,
-    resizeMode: 'contain',
-    position: 'absolute',
-    top: 30,
-    left: '50%',
-    marginLeft: -150,
-    zIndex: 1,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.5,
-    shadowRadius: 4,
-    elevation: 8,
+    height: 150, // Adjust the height as needed
+    marginBottom: 20,
   },
   imageContainer: {
     flexDirection: 'row',
-    alignItems: 'align-start',
-    overflow: 'scroll',
-    width: '100%',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    marginBottom: 20,
   },
   image: {
-    width: 250,
-    height: 250,
-    marginHorizontal: 5,
+    width: 120,
+    height: 120,
+    margin: 5,
     borderRadius: 10,
   },
   textContainer: {
-    position: 'absolute',
-    bottom: 200,
-    left: 20,
-    right: 20,
-    padding: 10,
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.7)',
     borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    elevation: 2,
-  },
-  textContainer2: {
-    position: 'absolute',
-    bottom: 60,
-    left: 20,
-    right: 20,
     padding: 10,
-    backgroundColor: 'white',
-    borderRadius: 10,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3,
-    shadowRadius: 2,
-    elevation: 2,
+    marginBottom: 20,
+    width: '90%',
   },
-  snowContainer: {
-    position: 'fixed',
-    top: 50,
-    left: 100,
-    right: 100,
+  text: {
+    fontSize: 14,
+    textAlign: 'center',
+    fontFamily: 'sans-serif',
+    color: '#333',
+  },
+  confettiContainer: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
     bottom: 0,
-    width: '100%', // Adjust the width and height as needed
-    height: '100%',
   },
 });
 
