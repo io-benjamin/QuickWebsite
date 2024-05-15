@@ -4,12 +4,13 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, Text, View } from 'react-native';
 import BirthdayPage from './birthday';
 import ChristmasPage from './christmas';
+import GraduationPage from './graduation';
 
 
 export const pages = [
+    { name: 'Christmas', component: ChristmasPage },
   { name: 'Birthday', component: BirthdayPage },
-  { name: 'Christmas', component: ChristmasPage },
-  // Add more page objects as needed
+  { name: 'Graduation', component: GraduationPage },
 ];
 
 export const NavigationButtons = ({ navigation, currentPage }) => {
