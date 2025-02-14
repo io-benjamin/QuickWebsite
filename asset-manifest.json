@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/merry-xmas/static/js/main.6935ac69.js",
-    "static/js/186.68cb60e8.js": "/merry-xmas/static/js/186.68cb60e8.js",
-    "static/media/Photos00004.jpg": "/merry-xmas/static/media/Photos00004.6449af45a10b0ead30c0.jpg",
+    "main.js": "/merry-xmas/static/js/main.2fcfb76f.js",
+    "static/js/186.51968fc9.js": "/merry-xmas/static/js/186.51968fc9.js",
     "static/media/Photos00002.jpg": "/merry-xmas/static/media/Photos00002.ad28ae03f2e76da961ff.jpg",
     "static/media/Photos00003.jpg": "/merry-xmas/static/media/Photos00003.e6588a2703f954b51d41.jpg",
+    "static/media/Val00002.jpg": "/merry-xmas/static/media/Val00002.9464ade95c5b0ce3dd06.jpg",
     "static/media/Photos00007.jpg": "/merry-xmas/static/media/Photos00007.8a2f69e8b83cc391fe98.jpg",
     "static/media/8.jpg": "/merry-xmas/static/media/8.d45963758546a24b8643.jpg",
     "static/media/Photos00010.jpg": "/merry-xmas/static/media/Photos00010.d4d08b1c36947302814b.jpg",
@@ -23,8 +23,10 @@
     "static/media/Photos00001.jpg": "/merry-xmas/static/media/Photos00001.6213f39c0bca826186e7.jpg",
     "static/media/image7.jpg": "/merry-xmas/static/media/image7.9e9eea95cce872c32084.jpg",
     "static/media/7.jpg": "/merry-xmas/static/media/7.dc710b919b39d7bd39a4.jpg",
+    "static/media/Val00003.jpg": "/merry-xmas/static/media/Val00003.b379605e1f8db0974d08.jpg",
     "static/media/image6.jpg": "/merry-xmas/static/media/image6.347654f889d48ed7cda8.jpg",
     "static/media/Photos00012.jpg": "/merry-xmas/static/media/Photos00012.85506217e8ff47572757.jpg",
+    "static/media/Val00001.jpg": "/merry-xmas/static/media/Val00001.24cf4ca27b1b5b48ebd1.jpg",
     "static/media/image3.jpg": "/merry-xmas/static/media/image3.af3ff68410cc36797394.jpg",
     "static/media/Photos00009.jpg": "/merry-xmas/static/media/Photos00009.2937d9a79041eba7fc8b.jpg",
     "static/media/image8.jpg": "/merry-xmas/static/media/image8.8d11aced4c0c48a4c96c.jpg",
@@ -40,6 +42,7 @@
     "static/media/ornament2.png": "/merry-xmas/static/media/ornament2.7eb0b9c06baa1ac3a260.png",
     "static/media/birthday.png": "/merry-xmas/static/media/birthday.9732d3512858f09655f8.png",
     "static/media/ornament1.png": "/merry-xmas/static/media/ornament1.d62f6ed6fa78f8f2cbbf.png",
+    "static/media/heart.png": "/merry-xmas/static/media/heart.f02532b20a2197a81fce.png",
     "static/media/image.png": "/merry-xmas/static/media/image.455cb1e1bf5b385a229c.png",
     "static/media/garland.png": "/merry-xmas/static/media/garland.aad7e671361053867249.png",
     "favicon.ico": "/merry-xmas/favicon.ico",
@@ -48,11 +51,11 @@
     "favicon-16.png": "/merry-xmas/favicon-16.png",
     "serve.json": "/merry-xmas/serve.json",
     "manifest.json": "/merry-xmas/manifest.json",
-    "main.6935ac69.js.map": "/merry-xmas/static/js/main.6935ac69.js.map",
-    "186.68cb60e8.js.map": "/merry-xmas/static/js/186.68cb60e8.js.map"
+    "main.2fcfb76f.js.map": "/merry-xmas/static/js/main.2fcfb76f.js.map",
+    "186.51968fc9.js.map": "/merry-xmas/static/js/186.51968fc9.js.map"
   },
   "entrypoints": [
-    "static/js/186.68cb60e8.js",
-    "static/js/main.6935ac69.js"
+    "static/js/186.51968fc9.js",
+    "static/js/main.2fcfb76f.js"
   ]
 }
